@@ -11,16 +11,6 @@ else {
         database: "burgers_db"
     });
 }
-/*
-connection.connect(function (error) {
-    if (error) {
-        console.log(error);
-        throw error;
-    }
-    console.log("step 2 - SQL connected id: " + connection.threadId);
-    console.log("--------------------------------------");
-});
-*/
 connection.connect();
 module.exports = connection;
 
