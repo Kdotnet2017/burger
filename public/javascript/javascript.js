@@ -14,4 +14,18 @@ $(document).ready(function () {
         })
         console.log(newRecord);
     });
+    $(document).on("click",".devouredClass",function(event){
+        event.preventDefault();
+        var id=$(this).data("id");
+        var newData={devoured:true};
+        $.ajax({
+            url:"/api/burgers/"+id,
+            type:"PUT",
+            data:newData
+        }).then(function(){
+            location.reload();
+        });
+        console.log(id);    
+    
+    })
 });

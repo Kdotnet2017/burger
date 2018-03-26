@@ -23,7 +23,7 @@ router.post("/api/burgers",function(req,res){
 });
 router.put("/api/burgers/:id",function(req,res){
     var id=req.params.id;
-    burger.updateOne("burgers_name","devoured",true,id,function(data){
+    burger.updateOne("devoured",req.body.devoured,id,function(data){
         console.log(data);
     })
 });
