@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $("#txtInput").focus();
     $("#btnSubmit").on("click", function (event) {
         console.log("iam in jquery");
         event.preventDefault();
