@@ -23,9 +23,9 @@ $(document).ready(function () {
             type:"PUT",
             data:newData
         }).then(function(){
-            location.reload();
+           // location.reload();
         });
         console.log(id);    
-    
+        location.reload();
     })
 });
